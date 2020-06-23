@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0px;
+    background: rgb(235, 234, 234);
+}
+.content-table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9em;
+    text-align: left;
+    background: white;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+.content-table tr th{
+    background-color:rgb(169, 220, 240) ;
+  font-weight: bold;
+}
+.content-table tr th, .content-table tr td{
+    padding: 15px 15px;
+}
+.content-table tr td{
+     border-bottom: 1px solid #dddddd;
+}
+.content-table tr:nth-of-type(odd){
+    background-color:#707c7c ;
+}
+.content-table tr:last-of-type{
+    border-bottom:2px solid rgb(169, 220, 240)  ;
+}
+.checkbtn{
+    display: block;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+ul{
+    color: white;
+    height: 20vh;
+    width: 15%;
+    background-color: #ababaa;
+    position: fixed;
+    top: 20px;
+    left: -100%;
+    text-align:left;
+    transition: all .5s;
+    z-index: 1;
+    margin-left: 50px;
+}
+ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+ul li a{
+    color:inherit;
+    text-decoration: none;  
+}
+ul li a:hover{
+    background: slategray;
+    transition: .5s;
+}
+ul li a:active{
+   color:black;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+@media screen and (max-width:950px){
+    ul{
+        width: 50%;
+    }
+}
+
+
